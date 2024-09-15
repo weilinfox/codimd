@@ -48,13 +48,13 @@ describe('Content security policies', function () {
     mock('../lib/config', testconfig)
     csp = mock.reRequire('../lib/csp')
 
-    assert(!csp.computeDirectives().scriptSrc.includes('https://cdn.staticfile.org'))
+    assert(!csp.computeDirectives().scriptSrc.includes('https://cdn.bytedance.com'))
     assert(!csp.computeDirectives().scriptSrc.includes('https://cdn.jsdelivr.net'))
     assert(!csp.computeDirectives().scriptSrc.includes('https://cdn.mathjax.org'))
-    assert(!csp.computeDirectives().styleSrc.includes('https://cdn.staticfile.org'))
+    assert(!csp.computeDirectives().styleSrc.includes('https://cdn.bytedance.com'))
     assert(!csp.computeDirectives().styleSrc.includes('https://cdn.jsdelivr.net'))
     assert(!csp.computeDirectives().styleSrc.includes('https://fonts.googleapis.com'))
-    assert(!csp.computeDirectives().fontSrc.includes('https://cdn.staticfile.org'))
+    assert(!csp.computeDirectives().fontSrc.includes('https://cdn.bytedance.com'))
     assert(!csp.computeDirectives().fontSrc.includes('https://fonts.gstatic.com'))
   })
 
